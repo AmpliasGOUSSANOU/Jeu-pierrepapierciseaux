@@ -6,15 +6,15 @@ class Player
       puts "0:Pierre, 1:Papier, 2:Ciseaux"
       # Assignez la valeur d'entrée du joueur à la variable "input_hand".
       # Astuce : regardez la méthode gets.
-      input_hand = gets.chomp.to_i
+      input_hand = gets.chomp
       # Si "input_hand" est l'un de "0, 1, 2", le processus d'itération se termine, sinon (y compris les caractères alphabétiques), le processus d'itération continue.
       while true
-        if [0, 1, 2].include?(input_hand)
-            return input_hand
+        if "012".include?(input_hand)
+            return input_hand.to_i
         else
             puts "Veuillez saisir un chiffre entre 0 et 2"
             puts "0:Pierre, 1:Papier, 2:Ciseaux"
-            input_hand = gets.chomp.to_i
+            input_hand = gets.chomp
         end
       end
     end
